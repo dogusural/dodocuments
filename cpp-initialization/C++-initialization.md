@@ -1,10 +1,8 @@
 ## Initialization types
 
-
+---
 
 #### Aggregate initialization
-
-
 
 ```
 struct Alp {
@@ -22,7 +20,7 @@ int ax[] {10,20,30};
 int ay[] = {10,20,30};
 ```
 
-
+---
 
 #### Default Initialization
 
@@ -33,7 +31,7 @@ int ay[] = {10,20,30};
 * If you default initialize a primitive type with static lifetime , it gets zero initialized.
 * if you default initialize a class type, default constructor is called.
 
-
+---
 
 #### Value initialization
 
@@ -45,4 +43,23 @@ int ay[] = {10,20,30};
   * `int a[10]{}; // all members are zero initialized.`
 
 * For class objects , default constructor is called.
+
+  ---
+
+#### Direct Initialization
+
+```c++
+int x(10);
+int x{10}; brace initialization doesnt allow narrowing conversions unlike paranthesis
+```
+
+---
+
+#### Copy initialization
+
+`int x =10`
+
+---
+
+
 
