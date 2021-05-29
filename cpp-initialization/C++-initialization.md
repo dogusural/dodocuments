@@ -30,6 +30,7 @@ int ay[] = {10,20,30};
 * If you default initialize a primitive type with automatic lifetime , it gets garbage value.
 * If you default initialize a primitive type with static lifetime , it gets zero initialized.
 * if you default initialize a class type, default constructor is called.
+* Default constructor that the compiler writes , default initializes the members. (Garbage for primitive types and default constructor for class types)
 
 ---
 
