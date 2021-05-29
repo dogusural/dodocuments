@@ -49,15 +49,19 @@ int ay[] = {10,20,30};
 #### Direct Initialization
 
 ```c++
-int x(10);
-int x{10}; brace initialization doesnt allow narrowing conversions unlike paranthesis
+int x(10); (direct initialization)
+int x{10}; brace initialization doesnt allow narrowing conversions unlike paranthesis (direct list initialization)
 ```
 
 ---
 
 #### Copy initialization
 
-`int x =10`
+`int x = 10`
+
+`myclass x = 23`
+
+
 
 ---
 
