@@ -6,7 +6,7 @@ Variables marked with *const* dont have global linkage. You cannot extern them f
 
 In C++ *const* variables need to be initialized unlike C.
 
-![const](/home/dural/Desktop/workspace/dodocuments/const/const.jpg)
+![const](const.jpg)
 
 
 
