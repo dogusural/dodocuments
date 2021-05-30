@@ -43,7 +43,7 @@ int ay[] = {10,20,30};
   * `int p*{} = int p*{nullptr}`
   * `int a[10]{}; // all members are zero initialized.`
 
-* For class objects , default constructor is called if it is explicitly declared and if no default constructor is declared(compiler generated compiler is used) then all primitive members get value initialized.
+* For class objects , default constructor is called if it is explicitly declared and if no default constructor is declared(compiler generated compiler is used) then all primitive members get zero initialized.
 
   ```
   class car
