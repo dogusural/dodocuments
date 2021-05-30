@@ -19,7 +19,7 @@ public:
     };
     test_class(test_class&& s)
     {
-        printf("move operator called\n");
+        printf("move constructor called\n");
     };
     void foo(test_class bar)
     {
