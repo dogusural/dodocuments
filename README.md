@@ -10,5 +10,5 @@
 
 ### To update the submodule to latest remove revision
 
-`git submodule update --remote --merge`
+`git submodule foreach git pull`
 
