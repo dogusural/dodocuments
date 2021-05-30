@@ -51,4 +51,4 @@ Now `argv[0]` should be `"/honky/tonk/toys"` and not `ls`, for all it is the `ls
 
 
 
-![image-20210129095927440](/home/dodo/Desktop/workspace/dodocuments/execvp/exec.jpg)
+![image-20210129095927440](exec.jpg)
