@@ -150,3 +150,61 @@ cout << "========================================"<<endl;
 
 ```
 
+
+
+#### Caveat
+
+In the snippet below, the function foo takes as an argument an rvalue reference. Although the value ref is referencing to is an rvalue and in the line below `Dodo dodo = ref;` assignment invokes the copy constructor ( please note the missing std::move call ). This happens because ref variable is of lvalue value type. An extra call to `std::move` would cast the reference effectively to an rvalue and forces the mvoe constructor. 
+
+```
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Dodo
+{
+public:
+    Dodo()
+    {
+        cout << "Default Constructor for " << this << std::endl;
+    }
+    Dodo(const Dodo &)
+    {
+        cout << "Copy Constructor for " << this << std::endl;
+    }
+    Dodo &operator=(const Dodo &)
+    {
+        cout << "Copy assignment Constructor for " << this << std::endl;
+        return *this;
+    }
+    Dodo(Dodo &&)
+    {
+        cout << "Move Constructor for " << this << std::endl;
+    }
+    Dodo operator=(const Dodo &&)
+    {
+        cout << "Move Assignment Operator for " << this << std::endl;
+        return *this;
+    }
+    ~Dodo()
+    {
+        cout << "Destructor for " << this << std::endl;
+    }
+
+private:
+};
+
+
+void foo(Dodo && ref)
+{
+    Dodo dodo = std::move(ref);
+}
+
+int main()
+{
+    Dodo dodo{};
+    foo(std::move(dodo));
+}
+```
+
